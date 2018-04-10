@@ -40,6 +40,9 @@ module.exports = {
           },
           {
             loader: "sass-loader"
+          },
+          {
+            loader: "vue-style-loader"
           }
         ]
       },

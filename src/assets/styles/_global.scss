@@ -1,8 +1,2 @@
-body {
-  font-family: $baseFont;
-  font-weight: $fontWeightRegular;
-  background-color: $black;
-  color: $white;
-  margin: 0;
-  padding: 0;
-}
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700');
+@import './variables';

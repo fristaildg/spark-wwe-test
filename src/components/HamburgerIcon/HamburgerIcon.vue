@@ -3,7 +3,7 @@
 
 <template>
   <div class="hamburger-icon">
-    X
+    <div class="hamburger-icon-inner"></div>
   </div>
 </template>
 
