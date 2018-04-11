@@ -1,5 +1,4 @@
 const HtmlWebPackPlugin = require("html-webpack-plugin");
-// const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 
 module.exports = {
@@ -17,7 +16,27 @@ module.exports = {
         loader: 'vue-loader',
         options: {
           loaders: {
-            js: 'babel-loader'
+            js: 'babel-loader',
+            scss: [
+              {
+                loader: "style-loader"
+              },
+              {
+                loader: "css-loader"
+              },
+              {
+                loader: "sass-loader"
+              },
+              {
+                loader: 'sass-resources-loader',
+                options: {
+                  resources: [
+                    'https://fonts.googleapis.com/css?family=Roboto:300,300i,400,700',
+                    path.resolve(__dirname, './src/assets/styles/_variables.scss'),
+                  ]
+                }
+              } 
+            ]
           }
         }
       },
@@ -40,10 +59,7 @@ module.exports = {
           },
           {
             loader: "sass-loader"
-          },
-          {
-            loader: "vue-style-loader"
-          }
+          }          
         ]
       },
       {
@@ -70,10 +86,6 @@ module.exports = {
     new HtmlWebPackPlugin({
       template: "./src/index.html",
       filename: "./index.html"
-    }),
-    // new MiniCssExtractPlugin({
-    //   filename: "[name].css",
-    //   chunkFilename: "[id].css"
-    // })
+    })
   ]
 };
