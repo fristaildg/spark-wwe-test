@@ -3,8 +3,8 @@
 
 <template>
   <nav class="nav-menu">
-    <HamburgerIcon/>
-    <ul class="menu-list">
+    <HamburgerIcon @setMenu="toggleMenu"/>
+    <ul class="menu-list" :class="isMenuOpen && 'is-open'">
       <li v-for="item in listItems"
         :key="item.name"
       >
@@ -13,7 +13,7 @@
         </a>
       </li>
       <li>
-        <Button text="Join Now"/>
+        <Button text="Join Now" class="join-button"/>
       </li>
     </ul>
   </nav>

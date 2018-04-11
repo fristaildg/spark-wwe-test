@@ -1,0 +1,36 @@
+@import '../../assets/styles/variables';
+
+.footer-container {
+  background: {
+    image: url('../../assets/images/footer-bg.jpg');
+    position: center center;
+    size: cover;
+    repeat: no-repeat;
+  }
+  padding: $basePad;
+
+  .content-grid {
+    // max-width: 500px;
+    // margin: 0 auto;
+
+    .grid-col {
+      margin: 0;
+      font-weight: $fontWeightLight;
+      font-size: 14px;
+      text-align: center;
+      
+      &:not(:last-child) {
+        margin-bottom: $basePad;
+
+        &:after {
+          content:'';
+          width: 70%;
+          height: 2px;
+          background-color: $white;
+          display: block;
+          margin: $basePad auto 0;
+        }
+      }
+    }
+  }  
+}

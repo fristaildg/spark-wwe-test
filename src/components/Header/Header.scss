@@ -1,0 +1,18 @@
+@import '../../assets/styles/variables';
+
+.header-container {
+  padding: 0 $basePad;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 90px;
+  position: sticky;
+  top: 0;
+  overflow-x: hidden;
+  background-color: $black;
+
+  .logo {
+    width: 100%;
+    max-width: 225px;    
+  }
+}

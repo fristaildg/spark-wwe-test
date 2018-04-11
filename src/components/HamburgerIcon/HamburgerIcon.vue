@@ -2,8 +2,13 @@
 <script src="./HamburgerIcon.js"></script>
 
 <template>
-  <div class="hamburger-icon">
-    <div class="hamburger-icon-inner"></div>
+  <div class="hamburger-icon"
+    :class="isMenuOpen && 'is-open'"
+    @click="toggleMenu"
+  >
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
   </div>
 </template>
 

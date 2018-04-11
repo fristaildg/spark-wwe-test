@@ -18,7 +18,13 @@ export default {
           name: 'Login',
           link: ''
         }
-      ]
+      ],
+      isMenuOpen: false
+    }
+  },
+  methods: {
+    toggleMenu() {
+      this.isMenuOpen = !this.isMenuOpen;
     }
   }
 }

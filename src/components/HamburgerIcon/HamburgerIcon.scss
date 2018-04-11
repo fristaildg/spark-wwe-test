@@ -1,21 +1,31 @@
 @import '../../assets/styles/variables';
 
 .hamburger-icon {
-  width: 50px;
-  height: 50px;
-
-  .hamburger-icon-inner {
+  width: 30px;
+  height: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  
+  .line {
+    transition: all 0.3s ease-in-out;
     width: 100%;
-    height: 2px;
-    background-color: $black;
-    margin: 5px 0;
+    height: 4px;
+    background-color: $white;    
+  }
 
-    &:before,
-    &:after {
-      width: inherit;
-      height: inherit;
-      display: block;
-      background-color: inherit;
+  &.is-open {    
+    .line {
+      &:first-child {
+        transform: translateY(9px) rotate(45deg) ;
+      }
+      &:last-child {
+        transform: translateY(-12px) rotate(-45deg);
+      }
+
+      &:nth-child(even) {
+        opacity: 0;
+      }
     }
   }
 }

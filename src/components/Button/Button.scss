@@ -1,0 +1,10 @@
+@import '../../assets/styles/variables';
+
+.button {
+  -webkit-appearance: none;
+  border: none;
+  background-color: $mainColor;
+  color: $white;
+  font-weight: $fontWeightBold;
+  padding: 10px 20px;
+}
