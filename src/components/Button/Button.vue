@@ -3,7 +3,9 @@
 
 <template>
   <button class="button">
-    {{text}}
+    <span>
+      {{text}}
+    </span>
   </button>
 </template>
 

@@ -29,8 +29,8 @@
           </p>
         </div>
       </div>
-      <div class="scroll-down-icon"></div>
     </div>
+    <div class="scroll-down-icon"></div>
   </main>
 </template>
 

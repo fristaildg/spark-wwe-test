@@ -1,16 +1,33 @@
 .header-container {
-  padding: 0 $basePad;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 90px;
   position: sticky;
   top: 0;
   overflow-x: hidden;
   background-color: $black;
+  z-index: 1;
 
-  .logo {
-    width: 100%;
-    max-width: 225px;    
+  header {
+    padding: 0 $basePad;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+  
+    .logo {
+      width: 100%;
+      max-width: 225px;    
+    }
+  }
+}
+
+@media ($large) {
+  .header-container {
+    background-color: rgba($black, 0.7);
+
+    header {
+      max-width: $maxWidthLarge;
+      margin: 0 auto;
+      padding: 0 $basePadLarge;
+      height: 100px;
+    }
   }
 }

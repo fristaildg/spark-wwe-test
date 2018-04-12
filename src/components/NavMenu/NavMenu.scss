@@ -59,3 +59,53 @@
     }
   }
 }
+
+@media($large) {
+  .nav-menu {
+    .menu-list {
+      transform: translateX(0);
+      position: static;
+      padding: 0;
+      background-color: transparent;
+
+      &:after {
+        display: none;
+      }
+
+      li {
+        display: inline-block;
+
+        a {
+          border-bottom: none;
+          font-weight: $fontWeightRegular;
+          padding: 0 $basePad;
+          line-height: 1; 
+          width: auto;
+          font-size: 14px;
+
+          &:after {
+            content: '';
+            width: 0;
+            height: 1px;
+            background-color: $mainColor;
+            transition: width 0.2s ease-in-out;
+            display: block;
+            margin-top: 2px;
+          }
+
+          &:hover {
+            &:after {
+              width: 100%;
+            }
+          }
+        }
+
+        &:first-child {
+          a {
+            border-right: 1px solid $white;                     
+          }
+        }
+      }
+    }
+  }  
+}

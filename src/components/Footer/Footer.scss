@@ -8,8 +8,6 @@
   padding: $basePad;
 
   .content-grid {
-    // max-width: 500px;
-    // margin: 0 auto;
 
     .grid-col {
       margin: 0;
@@ -31,4 +29,40 @@
       }
     }
   }  
+}
+
+@media($large) {
+  .footer-container {
+    padding: $basePadLarge 0;
+
+    .content-grid {
+      max-width: $maxWidthLarge;
+      margin: 0 auto;
+      padding-left: $basePadLarge;
+      display: flex;
+
+      .grid-col {
+        width: calc(100% / 3);
+        text-align: left;
+        font-size: 22px;
+        box-sizing: border-box;
+        padding: 0 90px;
+        display: flex;
+        align-items: center;
+
+        &:not(:last-child) {
+          margin-bottom: 0;
+          border-right: 1px solid $white;
+
+          &:after {
+            display: none;
+          }
+        }
+
+        &:first-child {
+          padding-left: 0;
+        }
+      }
+    }
+  }
 }

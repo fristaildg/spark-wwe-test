@@ -6,3 +6,33 @@
   font-weight: $fontWeightBold;
   padding: 10px 20px;
 }
+
+@media($large) {
+  .button {
+    position: relative;
+    cursor: pointer;
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+
+    &:before {
+      content: '';
+      width: 0;
+      height: 100%;
+      background-color: darken($mainColor, 10%);
+      position: absolute;
+      transition: width 0.2s ease-in-out;
+      top: 0;
+      left: 0;
+      z-index: 0;
+    }
+
+    &:hover {
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+}

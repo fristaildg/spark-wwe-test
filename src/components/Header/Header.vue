@@ -2,12 +2,14 @@
 <script src="./Header.js"></script>
 
 <template>
-  <header class="header-container">
-    <div class="logo">
-      <img :src="logo" alt="W Network">
-    </div>
-    <NavMenu/>
-  </header>
+  <div class="header-container">
+    <header>
+      <div class="logo">
+        <img :src="logo" alt="W Network">
+      </div>
+      <NavMenu/>
+    </header>
+  </div>
 </template>
 
 
